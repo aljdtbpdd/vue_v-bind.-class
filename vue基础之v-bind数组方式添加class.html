@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- 第二部 图形化数据 -->
+        <!-- v-bind: 等于 : 这次用: -->
+        <p :class='[name_left, name_top, name_right]'></p>
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el: app, //👆id选择器可以不写 "#app"  '这里的el:app'
+            data: {
+                name_left: 'left', //第一步定义数据 //后面写的类名 必须写冒号  我就老忘写😄
+                name_top: 'top',
+                name_right: 'right'
+            }
+
+        })
+    </script>
+</body>
+
+</html>
